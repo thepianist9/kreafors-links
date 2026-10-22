@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
+<title>KreaFors Links</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* One narrow column on a night sky, like the trailer's end card: name, three ways of thinking, links, people. */
+:root {
+  --sky: #090c14;
+  --panel: #121828;
+  --line: #262f45;
+  --fg: #f1f3f9;
+  --muted: #a9b2c6;
+  --star: #96d2ff;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+}
+html { background: var(--sky); }
+body {
+  background: var(--sky);
+  color: var(--fg);
+  font: 400 1.0625rem/1.5 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+  min-height: 100%;
+}
+canvas#sky { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+main {
+  position: relative; z-index: 1;
+  max-width: 30rem; margin: 0 auto;
+  padding-block: 3rem 2.5rem;
+  display: flex; flex-direction: column; gap: 2rem;
+}
+header { display: flex; flex-direction: column; gap: .5rem; }
+.kicker { font: 700 .75rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--star); }
+h1 { font: 800 clamp(3rem, 14vw, 4.25rem)/.95 var(--display); letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 0; }
+.ways { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; padding: 0; list-style: none; }
+.ways li { font-size: .85rem; padding: .3rem .7rem; border: 1px solid var(--line); border-radius: 999px; color: var(--fg); }
+.ways li span { color: var(--star); }
+section { display: flex; flex-direction: column; gap: .75rem; }
+h2 { font: 700 .75rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0; }
+a.link {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1rem 1.15rem; background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  color: var(--fg); text-decoration: none; min-width: 0;
+  transition: border-color .15s, transform .15s;
+}
+a.link:hover { border-color: var(--star); transform: translateY(-1px); }
+a.link:focus-visible, button:focus-visible { outline: 2px solid var(--star); outline-offset: 3px; }
+a.link strong { display: block; font: 600 1.15rem/1.25 var(--display); }
+a.link small { display: block; color: var(--muted); font-size: .875rem; }
+a.link .arrow { color: var(--star); font-size: 1.25rem; flex: none; }
+.person {
+  padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 14px;
+  display: grid; gap: .2rem; min-width: 0;
+}
+.person .name { font: 600 1.2rem/1.25 var(--display); }
+.person .role { color: var(--muted); font-size: .9rem; }
+.mail { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; margin-top: .5rem; min-width: 0; }
+.mail a { color: var(--star); overflow-wrap: anywhere; min-width: 0; }
+button.copy {
+  font: 700 .8rem/1 var(--body); color: var(--fg); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px; padding: .4rem .75rem; cursor: pointer;
+}
+button.copy:hover { border-color: var(--star); }
+.onsite { font: 700 .7rem/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--star); }
+footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); padding-top: 1.25rem; }
+@media (prefers-reduced-motion: reduce) { a.link { transition: none; } a.link:hover { transform: none; } }
+</style>
+</head>
+<body>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<main>
+  <header>
+    <span class="kicker">Xplorer Day 2026 · München</span>
+    <h1>KREAFORS</h1>
+    <p class="sub">Kreativlabor zum Forschenden Lernen. Ein Workshoperlebnis in VR für Schulklassen, für Jugendliche von 14 bis 18+.</p>
+    <ul class="ways">
+      <li><span>●</span> Divergentes Denken</li>
+      <li><span>●</span> Konvergentes Denken</li>
+      <li><span>●</span> Figuratives Denken</li>
+    </ul>
+  </header>
+
+  <section aria-labelledby="links">
+    <h2 id="links">Links</h2>
+    <a class="link" href="https://ews.uni-greifswald.de/mitarbeitende/lehrstuhl-fuer-schulpaedagogik/mitarbeitende/hoferichter-frances/kreativlabor-zum-forschenden-lernen-kreafors/" target="_blank" rel="noopener">
+      <span><strong>Projektseite</strong><small>Universität Greifswald, Lehrstuhl für Schulpädagogik</small></span><span class="arrow">↗</span>
+    </a>
+    <a class="link" href="https://tim-deussen.de/" target="_blank" rel="noopener">
+      <span><strong>Studio Deussen</strong><small>Entwicklung der VR Anwendung</small></span><span class="arrow">↗</span>
+    </a>
+    <a class="link" href="https://xplorerday.de/" target="_blank" rel="noopener">
+      <span><strong>Xplorer Day</strong><small>Mobil mit KI und XR in die Zukunft</small></span><span class="arrow">↗</span>
+    </a>
+  </section>
+
+  <section aria-labelledby="kontakt">
+    <h2 id="kontakt">Kontakt</h2>
+    <div class="person">
+      <span class="name">Tim Deussen</span>
+      <span class="role">Studio Deussen</span>
+      <div class="mail"><a href="mailto:tim@tim-deussen.de">tim@tim-deussen.de</a><button class="copy" type="button" id="copy-tim" data-mail="tim@tim-deussen.de">Kopieren</button></div>
+    </div>
+    <div class="person">
+      <span class="onsite">Heute vor Ort</span>
+      <span class="name">David Anthony</span>
+      <span class="role">Lead Developer, Studio Deussen</span>
+      <div class="mail"><a href="mailto:DavidAnthony@StudioDeussen.onmicrosoft.com">DavidAnthony@StudioDeussen.onmicrosoft.com</a><button class="copy" type="button" id="copy-david" data-mail="DavidAnthony@StudioDeussen.onmicrosoft.com">Kopieren</button></div>
+    </div>
+  </section>
+
+  <footer>Entwickelt von Studio Deussen · In Kooperation mit der Universität Greifswald</footer>
+</main>
+
+<script>
+// Copy an address; where the clipboard is refused, select the text so it can be copied by hand.
+document.querySelectorAll("button.copy").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var mail = b.dataset.mail, link = b.previousElementSibling;
+    function done(t) { b.textContent = t; setTimeout(function () { b.textContent = "Kopieren"; }, 1800); }
+    function select() { var r = document.createRange(); r.selectNodeContents(link); var s = getSelection(); s.removeAllRanges(); s.addRange(r); done("Markiert"); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(mail).then(function () { done("Kopiert"); }, select);
+    else select();
+  });
+});
+// A still field of stars behind the page.
+(function () {
+  var c = document.getElementById("sky"), x = c.getContext("2d");
+  function draw() {
+    var d = window.devicePixelRatio || 1, w = innerWidth, h = innerHeight;
+    c.width = w * d; c.height = h * d; x.scale(d, d);
+    var seed = 7; function r() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+    for (var i = 0; i < Math.round(w * h / 2600); i++) {
+      x.globalAlpha = .15 + r() * .6; x.fillStyle = r() < .2 ? "#96d2ff" : "#ffffff";
+      x.beginPath(); x.arc(r() * w, r() * h, r() * 1.1 + .2, 0, 6.283); x.fill();
+    }
+  }
+  draw(); addEventListener("resize", draw);
+})();
+</script>
+</body>
+</html>
