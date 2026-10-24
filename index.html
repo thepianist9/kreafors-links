@@ -74,6 +74,7 @@ button.copy {
 }
 button.copy:hover { border-color: var(--star); }
 .onsite { font: 700 .7rem/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--star); }
+.trailer { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; border: 1px solid var(--line); border-radius: 14px; }
 footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); padding-top: 1.25rem; }
 @media (prefers-reduced-motion: reduce) { a.link { transition: none; } a.link:hover { transform: none; } }
 </style>
@@ -91,6 +92,14 @@ footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--lin
       <li><span>●</span> Figuratives Denken</li>
     </ul>
   </header>
+
+  <section aria-labelledby="trailer">
+    <h2 id="trailer">Trailer</h2>
+    <video class="trailer" controls playsinline preload="metadata" poster="trailer-poster.jpg">
+      <source src="kreafors-trailer.mp4" type="video/mp4">
+      Ihr Browser kann dieses Video nicht abspielen. <a href="kreafors-trailer.mp4">Video herunterladen</a>
+    </video>
+  </section>
 
   <section aria-labelledby="links">
     <h2 id="links">Links</h2>
